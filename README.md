@@ -1,23 +1,37 @@
-xcloudfoundry 
-==============
+# xcloudfoundry
+xcloudfoundry，旨在整合数据中心异构虚拟化资源为统一的资源池，并在资源池上为用户提供各类IAAS、PAAS服务。    
+同时，xcloudfoundry定义了IAAS/PAAS服务生命周期管理以及服务实例生命周期管理的规范&框架。所以，xcloudfoundry首先是一个应用的服务化平台，然后才是一个ITaaS的服务平台。
+**系统正在大幅调整，现有代码已废弃，请忽略所有源码。**欢迎交流。    
 
-通用分布式服务化平台，构建内部私有云平台的理想选择，集中解决基于分布式系统的基础设施管理、应用服务化、分布式调度、工作流引擎、系统监控、开放API等问题，主要应用于应用服务化、服务自动化、监控运维等私有云关键场景。项目持续开发中。
+### Features:    
+* 支持接入管理OpenStack、AliYun、AWS、Docker等混合云能力。
+* 支持PAAS资源灵活调度（静态/动态方式，主机/Docker方式）。
+* 支持项目管理，以项目形式组织、限制资源 & 用户，并对外提供服务。
+* 支持服务注册、资源申请、上线、下线、升级维护等生命周期管理。
+* 支持服务实例申请、创建、注册。
+* 支持分钟级服务快速接入。
+* 支持服务实例到期提醒、延期、销毁、以及其他维护操作自定义。
+* 支持工作流审批。
+* 支持云主机、块存储等各种IAAS服务。
+* 支持RDB、NoSQL、消息队列、分布式等各种PAAS服务。
+* 支持安全管理、监控管理、事件管理、日志管理、高性能/可靠性等。
+* 支持大规模场景，架构可横向扩展。
 
+### Framework:    
+* 产品概念架构:        
+![image](screenshot/幻灯片1.PNG)
+* 系统详细架构:    
+![image](screenshot/幻灯片2.PNG)
+* 服务实例申请流程:
+![image](screenshot/幻灯片3.PNG)
+* IAAS服务模型:
+![image](screenshot/幻灯片4.PNG)
+* PAAS服务模型:
+![image](screenshot/幻灯片5.PNG)
 
-### 简介:
-    通用分布式服务平台（内置pbrpc、http性能测试、ftp等多种常用服务）
-    分布式调度（所有任务既可在节点池构建也可在指定节点构建；即可在单节点构建；也可在节点池并发构建）
-    高性能（分布式构架；各模块全异步调用；支持多个集群、多个节点）
-    高可靠性（GearServer支持主备；支持任务队列数据持久化；支持失败重试）
-    易扩展（插件热插拔；节点扩展方便；外部模块3分钟即可完成接入；接入即可API化）
-    自动化（全流程自动化；任务状态实时监控）
-    工作流（内置可视化工作流系统，充分简化任务设计与调度）
-    性能监控（内置集群/节点的系统级/进程级CPU、内存、网络监控功能）
-    开放API、CLI管理
+### About Me:
+* 欢迎对OpenStack、AliYun/AWS、Docker、Mesos/Marathon、K8S、IAAS、PAAS等感兴趣小伙伴多多交流。  
+* Blog: [http://www.cnblogs.com/junneyang/](http://www.cnblogs.com/junneyang/)    
+* WeChat:     
+![image](screenshot/wechat.png)
 
-
-### 架构:
-![image](screenshot/002.jpg)     
-    
-### 实现:
-![image](screenshot/003.jpg)     
